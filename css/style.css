@@ -1,0 +1,169 @@
+header .nav-link {
+  position: relative;
+  margin: 0 15px;
+  transition: all 0.3s;
+}
+header .nav-item a.nav-link.active {
+  color: green !important;
+}
+header .nav-link:hover::before {
+  width: 100%;
+}
+header .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: green;
+  transition: all 0.5s;
+}
+header .nav-link:hover {
+  color: green !important;
+}
+
+header .active::before {
+  width: 100%;
+}
+/* Carousel */
+.carousel .carousel-caption img {
+  width: 150px;
+  height: 150px;
+}
+
+.carousel .carousel-caption {
+  /* position: absolute;
+  left: 50%;
+  top: 50%; */
+  /* transform nhận giá trị âm cho 2 chiều giúp đẩy ngược phần tử -> canh giữa */
+  /* transform: translate(-50%, -50%);
+  right: unset;
+  bottom: unset; */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* right: 0;
+  bottom: 0; */
+
+  background-color: rgba(39, 43, 54, 0.5);
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.carousel .carousel-indicators button {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+.carousel-item h5 {
+  font-size: 56px;
+}
+/* project */
+.project {
+  padding: 50px 0;
+}
+.project_title {
+  text-align: center;
+}
+.project .project_content .nav {
+  justify-content: center;
+}
+.project .nav-pills .nav-link.active {
+  background-color: #35a22c;
+  border-color: #35a22c;
+}
+.project .nav-link {
+  color: black;
+  border: 1px solid black;
+}
+
+/* .col-4 {
+  height: 150px;
+  background-color: orange;
+} */
+.project .project_item {
+  border-radius: 8px;
+  /* background-color: pink; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* position: relative; */
+  transition: all 0.5s;
+}
+.project .project_item h3 {
+  transition: all 0.5s;
+}
+.project .project_item img {
+  /* border-radius voi 4 gia tri se di theo huong topleft di ve tay phai */
+  border-radius: 8px 8px 0 0;
+}
+.project .project_item:hover h3 {
+  color: #35a22c;
+}
+.project .project_text {
+  border: 1px solid transparent;
+  transition: all 0.5s;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+}
+.project .project_item:hover .project_text {
+  border-color: #35a22c;
+}
+/* available */
+.available {
+  background-image: url(../image/3.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+.available::before {
+  content: "";
+  position: absolute;
+  padding: 100px 0 150px;
+  background-color: rgba(7, 10, 12, 0.75);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.available .avail_item {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 50px;
+  text-align: center;
+}
+
+/* luu y: đặc biệt khi sử dụng max-width cho reponsive: luôn để các giá trị max-width lớn ở trước các giá trị nhỏ hơn */
+/* Sử lý cho màn hình lớn trước như laptop, màn hình rồi mới đến taplet ipad iphone */
+/* max width lấy giá trị từ 0 > lớn (laptop first) */
+/* min width lấy từ giá trị hiện có > lớn hơn (iphone first) */
+/* @media screen and (max-width: 1200px) {
+  .carousel h5 {
+    color: red;
+  }
+}
+@media screen and (max-width: 576px) {
+  .project_text {
+    background: orange;
+  }
+} */
+/* Lưu ý đặc biệt: khi sử dụng min-width để reponsive ưeb site nhớ set từ các giá trị nhỏ trước sau đó mới tới lớn  */
+/* @media screen and (min-width: 576px) {
+  .carousel h5 {
+    color: red;
+  }
+}
+@media screen and (min-width: 992px) {
+  .carousel h5 {
+    color: purple;
+  }
+} */
